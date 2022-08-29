@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "311354220465",
+    "firebase_url": "https://appfutbol-afd21-default-rtdb.firebaseio.com",
+    "project_id": "appfutbol-afd21",
+    "storage_bucket": "appfutbol-afd21.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:311354220465:android:689176815ba148b2ede790",
+        "android_client_info": {
+          "package_name": "com.example.appfutbol"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "311354220465-osr62jblfbnm09lnjddichi6g1ofrrm7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.appfutbol",
+            "certificate_hash": "367d5c4cc9957937b3f5441b8d142d8e5dd414c1"
+          }
+        },
+        {
+          "client_id": "311354220465-6se4j73lpnu5aajbpjg44d98b6c05ri6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDasbeTRBAo3rM76xJT6-cMLVzkrk2XSLY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "311354220465-6se4j73lpnu5aajbpjg44d98b6c05ri6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

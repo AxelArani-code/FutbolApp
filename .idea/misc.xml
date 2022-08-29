@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/axela/AndroidStudioProjects/AppFutbol/app/src/main/res/layout/activity_creation_match.xml" value="0.16" />
+        <entry key="..\:/Users/axela/AndroidStudioProjects/AppFutbol/app/src/main/res/layout/activity_login.xml" value="0.30434782608695654" />
+        <entry key="..\:/Users/axela/AndroidStudioProjects/AppFutbol/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/axela/AndroidStudioProjects/AppFutbol/app/src/main/res/layout/activity_register.xml" value="0.30434782608695654" />
+        <entry key="..\:/Users/axela/AndroidStudioProjects/AppFutbol/app/src/main/res/layout/activity_seting.xml" value="0.30434782608695654" />
+        <entry key="..\:/Users/axela/AndroidStudioProjects/AppFutbol/app/src/main/res/layout/activity_splash.xml" value="0.30434782608695654" />
+        <entry key="..\:/Users/axela/AndroidStudioProjects/AppFutbol/app/src/main/res/layout/activity_view_descripsion.xml" value="0.4328571428571429" />
+        <entry key="..\:/Users/axela/AndroidStudioProjects/AppFutbol/app/src/main/res/layout/activity_view_match.xml" value="0.315625" />
+        <entry key="..\:/Users/axela/AndroidStudioProjects/AppFutbol/app/src/main/res/layout/character_content.xml" value="0.15416666666666667" />
+        <entry key="..\:/Users/axela/AndroidStudioProjects/AppFutbol/app/src/main/res/layout/container.xml" value="0.5" />
+        <entry key="..\:/Users/axela/AndroidStudioProjects/AppFutbol/app/src/main/res/layout/fragment_account.xml" value="0.30434782608695654" />
+        <entry key="..\:/Users/axela/AndroidStudioProjects/AppFutbol/app/src/main/res/layout/fragment_buscar.xml" value="0.30434782608695654" />
+        <entry key="..\:/Users/axela/AndroidStudioProjects/AppFutbol/app/src/main/res/layout/fragment_descrip.xml" value="0.315625" />
+        <entry key="..\:/Users/axela/AndroidStudioProjects/AppFutbol/app/src/main/res/layout/fragment_home.xml" value="0.33" />
+        <entry key="..\:/Users/axela/AndroidStudioProjects/AppFutbol/app/src/main/res/layout/fragment_information.xml" value="0.3015625" />
+        <entry key="..\:/Users/axela/AndroidStudioProjects/AppFutbol/app/src/main/res/layout/fragment_perfil.xml" value="0.30434782608695654" />
+        <entry key="..\:/Users/axela/AndroidStudioProjects/AppFutbol/app/src/main/res/layout/fragment_security.xml" value="0.30434782608695654" />
+        <entry key="..\:/Users/axela/AndroidStudioProjects/AppFutbol/app/src/main/res/layout/progress_dialog.xml" value="0.30434782608695654" />
+        <entry key="..\:/Users/axela/AndroidStudioProjects/AppFutbol/app/src/main/res/menu/nav_menu.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
