@@ -25,12 +25,13 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginActivity extends AppCompatActivity {
-    EditText txtLoginEmail, txtLoginPassword;
-    Button btnLogin;
-    TextView lblCrearCuenta,TxtReset;
-    ProgressBar progressBa;
-    ProgressDialog progressDialog;
-    FirebaseAuth mAuth;
+    private EditText txtLoginEmail, txtLoginPassword;
+    private Button btnLogin;
+    private TextView lblCrearCuenta,TxtReset, textError;
+    private ProgressBar progressBa;
+    private ProgressDialog progressDialog;
+    private   FirebaseAuth mAuth;
+    private String error_DataBase = "Error en la base de datos, espere...";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -80,6 +81,7 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin = findViewById(R.id.btnlogin);
         lblCrearCuenta = findViewById(R.id.Registrarse);
         TxtReset = findViewById(R.id.forgotPassword);
+        textError = findViewById(R.id.textViewError);
         //progressBa = findViewById(R.id.progressBar);
 
     }
@@ -131,14 +133,15 @@ public class LoginActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
 
-                            Toast.makeText(LoginActivity.this, "Iniciando, espere...", Toast.LENGTH_LONG).show();
+                            //Toast.makeText(LoginActivity.this, "Iniciando, espere...", Toast.LENGTH_LONG).show();
                             //progressBa.setVisibility(View.GONE);
-                            //startActivity(new Intent(LoginActivity.this,MainActivity.class));
                             ProgressBarStart();
+
                         }
                         else {
                             Toast.makeText(LoginActivity.this, "Registro falla, verifique "+ task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                             //progressBa.setVisibility(View.GONE);
+                            ProgressBarStartError();
 
                         }
                     }
@@ -148,30 +151,12 @@ public class LoginActivity extends AppCompatActivity {
 
 
     private void ProgressBarStart() {
-        progressDialog = new ProgressDialog(LoginActivity.this);
-
-        progressDialog.show();
-        progressDialog.setContentView(R.layout.progress_dialog);
-
-        progressDialog.getWindow().setBackgroundDrawableResource(
-                android.R.color.transparent
-        );
-
-        Thread timer = new Thread(){
-            @Override
-            public void run() {
-                try {
-                    sleep(2500);
-                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                    startActivity(intent);
-                    progressDialog.dismiss();
-                    super.run();
-                } catch (InterruptedException e){
-                    e.printStackTrace();
-                }
-            }
-        };
-        timer.start();
+        startActivity(new Intent(LoginActivity.this,ViewLoad.class));
+    }
+    private void  ProgressBarStartError(){
+        startActivity(new Intent(LoginActivity.this,ViewError.class));
+        //textError.setText(error_DataBase);
+        //Para poder, por ejemplo enviar el datos de errores tendria que armar una clase con un array o hacer un metodo con json, en donde traigo los erroes, pero y asi enviarlos a la otra vista
     }
 
 }

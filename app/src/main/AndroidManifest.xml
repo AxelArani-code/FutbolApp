@@ -18,6 +18,20 @@
         android:theme="@style/Theme.AppFutbol"
         tools:targetApi="31">
         <activity
+            android:name=".Ui.LoadTurno"
+            android:exported="false" />
+        <activity
+            android:name=".Ui.ViewError"
+            android:exported="false" />
+        <activity
+            android:name=".Ui.ViewLoad"
+            android:exported="false" />
+        <activity
+            android:name=".Ui.ActivityImagen"
+            android:exported="false"
+            android:label="@string/title_activity_imagen"
+            android:theme="@style/Theme.AppFutbol.NoActionBar" />
+        <activity
             android:name=".Ui.ViewDescripsion"
             android:exported="false" />
         <activity

@@ -3,23 +3,26 @@ package com.example.appfutbol.Model;
 import java.io.Serializable;
 
 public class Cancha implements Serializable {
-    private  String Id;
+    private String Id;
     private String nombre;
     private String ubicacion;
     private String precio;
     private String numero;
-    private String horarios;
+    private String horarios_Apertura;
+    private String horarios_Cierre;
     private String descripcion;
     public Cancha() {
 
     }
-    public Cancha(String id, String nombre, String ubicacion, String precio, String numero, String horarios, String descripcion) {
+
+    public Cancha(String id, String nombre, String ubicacion, String precio, String numero, String horarios_Apertura, String horarios_Cierre, String descripcion) {
         Id = id;
         this.nombre = nombre;
         this.ubicacion = ubicacion;
         this.precio = precio;
         this.numero = numero;
-        this.horarios = horarios;
+        this.horarios_Apertura = horarios_Apertura;
+        this.horarios_Cierre = horarios_Cierre;
         this.descripcion = descripcion;
     }
 
@@ -63,12 +66,20 @@ public class Cancha implements Serializable {
         this.numero = numero;
     }
 
-    public String getHorarios() {
-        return horarios;
+    public String getHorarios_Apertura() {
+        return horarios_Apertura;
     }
 
-    public void setHorarios(String horarios) {
-        this.horarios = horarios;
+    public void setHorarios_Apertura(String horarios_Apertura) {
+        this.horarios_Apertura = horarios_Apertura;
+    }
+
+    public String getHorarios_Cierre() {
+        return horarios_Cierre;
+    }
+
+    public void setHorarios_Cierre(String horarios_Cierre) {
+        this.horarios_Cierre = horarios_Cierre;
     }
 
     public String getDescripcion() {

@@ -8,16 +8,12 @@
     tools:context=".Ui.ViewDescripsion">
 
 
-
-
     <View
         android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="900dp"
         android:layout_marginStart="-8dp"
-        android:layout_marginLeft="-8dp"
         android:layout_marginEnd="-8dp"
-        android:layout_marginRight="-8dp"
         android:background="@drawable/fondo1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,6 +29,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/button_back" />
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginStart="270dp"
+        android:background="@drawable/editar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_Back"
+        app:layout_constraintTop_toTopOf="@+id/view" />
 
     <ScrollView
         android:id="@+id/scrollView2"
@@ -67,8 +73,9 @@
                     android:gravity="center"
                     android:text="Publicar cancha"
                     android:textColor="@color/white"
-                    android:textStyle="bold"
-                    android:textSize="32sp" />
+                    android:textSize="32sp"
+                    android:textStyle="bold" />
+
                 <TextView
                     android:id="@+id/textView_Ubicacion"
                     android:layout_width="match_parent"
@@ -115,13 +122,12 @@
                         android:textSize="16sp" />
 
 
-
                     <Button
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_below="@+id/imageView26"
 
-                        android:text="Pedir Turno"/>
+                        android:text="Pedir Turno" />
 
                     <ImageView
                         android:id="@+id/imageView19"

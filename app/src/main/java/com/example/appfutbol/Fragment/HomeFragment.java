@@ -5,6 +5,8 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -16,6 +18,7 @@ import android.widget.ImageView;
 import com.example.appfutbol.Adapter.canchaAdapter;
 import com.example.appfutbol.Model.Cancha;
 import com.example.appfutbol.R;
+import com.example.appfutbol.Ui.ActivityImagen;
 import com.example.appfutbol.Ui.CreationMatch;
 import com.example.appfutbol.Ui.ViewDescripsion;
 import com.google.android.material.card.MaterialCardView;
@@ -65,8 +68,8 @@ public class HomeFragment extends Fragment {
         btn_CrearCancha.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getContext(), CreationMatch.class);
-                startActivity(intent);
+                startActivity(new Intent(getContext(), CreationMatch.class));
+
             }
         });
 

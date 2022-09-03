@@ -54,7 +54,7 @@ public class canchaAdapter extends RecyclerView.Adapter<canchaAdapter.ViewHolder
               Intent intent = new Intent(context,ViewDescripsion.class);
               intent.putExtra("nombre", cancha.getNombre());
                 intent.putExtra("ubicacion", cancha.getUbicacion());
-                intent.putExtra("horario", cancha.getHorarios());
+               // intent.putExtra("horario", cancha.getHorarios());
                 intent.putExtra("presio", cancha.getPrecio());
                 intent.putExtra("numero", cancha.getNumero());
                 intent.putExtra("descripsion", cancha.getDescripcion());
