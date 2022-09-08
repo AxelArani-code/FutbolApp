@@ -11,4 +11,26 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+
+    <string name="imagen">  <br />Imagen</string>
+    <string name="nombre_cancha"><br />   Nombre Cancha</string>
+    <string name="insertar_imagen">Insertar Imagen</string>
+    <string name="ingrese_nombre_de_la_cancha">Ingrese Nombre de la cancha</string>
+    <string name="selecione_ubicacion"> <br />  Selecione Ubicacion</string>
+    <string name="ingrese_ubicaci_n">Ingrese Ubicación</string>
+    <string name="tel_fono"> <br />  Teléfono</string>
+    <string name="ingrese_tel_fono">Ingrese Teléfono</string>
+    <string name="apertura"><br />   Apertura</string>
+    <string name="cierre"><br />   Cierre</string>
+    <string name="ingrese_horario_apertura">Ingrese horario apertura</string>
+    <string name="ingrese_horario_cierre">Ingrese horario cierre</string>
+    <string name="horarios_de_apertura_y_cierre">Horarios de apertura y cierre</string>
+    <string name="escriba_que_tipo_de_canchas_tiene_para_10_personas_o_m_s_y_al_d_a_cuantos_turnos_tiene_en_total">Escriba que tipo de canchas tiene para 10 personas o más y al día cuantos turnos tiene en total.</string>
+    <string name="escribir"> <br />  Escribir..</string>
+    <string name="ingrese_descripci_n">Ingrese Descripción</string>
+    <string name="coste_por_cancha"><br />   Coste por cancha</string>
+    <string name="ingrese_coste">Ingrese Coste</string>
+    <string name="descripci_n"><br />   Descripción</string>
+    <string name="siguiente">Siguiente</string>
 </resources>

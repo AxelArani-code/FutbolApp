@@ -18,6 +18,12 @@
         android:theme="@style/Theme.AppFutbol"
         tools:targetApi="31">
         <activity
+            android:name=".Ui.InformationTurno"
+            android:exported="false" />
+        <activity
+            android:name=".Ui.ViewTurnos"
+            android:exported="false" />
+        <activity
             android:name=".Ui.LoadTurno"
             android:exported="false" />
         <activity

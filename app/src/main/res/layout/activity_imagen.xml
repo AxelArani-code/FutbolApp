@@ -17,13 +17,13 @@
             android:layout_marginTop="16dp"
             android:text="Cancelar"
             android:textColor="@color/followers"
-            app:layout_constraintEnd_toStartOf="@+id/textView26"
+            app:layout_constraintEnd_toStartOf="@+id/textViewBeta"
             app:layout_constraintHorizontal_bias="0.202"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView26"
+            android:id="@+id/textViewBeta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -43,11 +43,11 @@
             android:layout_marginStart="32dp"
             android:layout_marginTop="100dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView26"
+            app:layout_constraintTop_toBottomOf="@+id/textViewBeta"
             app:srcCompat="@drawable/car_view_1" />
 
         <ImageView
-            android:id="@+id/imageView11"
+            android:id="@+id/btn_Turno_Nuevo_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="100dp"
@@ -55,7 +55,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.894"
             app:layout_constraintStart_toEndOf="@+id/imageView8"
-            app:layout_constraintTop_toBottomOf="@+id/textView26"
+            app:layout_constraintTop_toBottomOf="@+id/textViewBeta"
             app:srcCompat="@drawable/car_view_1" />
 
         <TextView
@@ -77,10 +77,10 @@
             android:layout_marginEnd="84dp"
             android:text="N_Turno"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView11" />
+            app:layout_constraintTop_toBottomOf="@+id/btn_Turno_Nuevo_2" />
 
         <ImageView
-            android:id="@+id/imageView12"
+            android:id="@+id/btn_Turno_Nuevo_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
@@ -90,13 +90,13 @@
             app:srcCompat="@drawable/car_view_2" />
 
         <ImageView
-            android:id="@+id/imageView13"
+            android:id="@+id/btn_Turno_Nuevo_4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.573"
-            app:layout_constraintStart_toEndOf="@+id/imageView12"
+            app:layout_constraintStart_toEndOf="@+id/btn_Turno_Nuevo_3"
             app:layout_constraintTop_toBottomOf="@+id/textView13"
             app:srcCompat="@drawable/car_view_2" />
 
@@ -109,7 +109,7 @@
             app:layout_constraintEnd_toStartOf="@+id/textView19"
             app:layout_constraintHorizontal_bias="0.324"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView12" />
+            app:layout_constraintTop_toBottomOf="@+id/btn_Turno_Nuevo_3" />
 
         <TextView
             android:id="@+id/textView19"
@@ -119,7 +119,7 @@
             android:layout_marginEnd="76dp"
             android:text="TextView"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView13" />
+            app:layout_constraintTop_toBottomOf="@+id/btn_Turno_Nuevo_4" />
 
         <TextView
             android:id="@+id/textView20"
@@ -130,7 +130,7 @@
             app:layout_constraintBottom_toTopOf="@+id/imageView8"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView26"
+            app:layout_constraintTop_toBottomOf="@+id/textViewBeta"
             app:layout_constraintVertical_bias="0.0" />
 
 

@@ -17,7 +17,7 @@ public class ViewError extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(ViewError.this, MainActivity.class);
+                Intent intent = new Intent(ViewError.this, LoginActivity.class);
                 startActivity(intent);
                 finish();
             }

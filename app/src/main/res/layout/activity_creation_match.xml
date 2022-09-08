@@ -21,13 +21,13 @@
             android:layout_marginTop="16dp"
             android:text="Cancelar"
             android:textColor="@color/followers"
-            app:layout_constraintEnd_toStartOf="@+id/textView26"
+            app:layout_constraintEnd_toStartOf="@+id/textViewBeta"
             app:layout_constraintHorizontal_bias="0.202"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView26"
+            android:id="@+id/textViewBeta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -60,7 +60,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.103"
             app:layout_constraintStart_toEndOf="@+id/imageView15"
-            app:layout_constraintTop_toBottomOf="@+id/textView26" />
+            app:layout_constraintTop_toBottomOf="@+id/textViewBeta" />
 
         <TextView
             android:id="@+id/textView28"
@@ -80,7 +80,7 @@
             android:layout_marginTop="56dp"
             android:background="@drawable/custom_input"
             android:ems="10"
-            android:hint="Imagen"
+            android:hint="@string/imagen"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.525"
@@ -93,7 +93,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:layout_marginBottom="13dp"
-            android:text="Insertar Imagen"
+            android:text="@string/insertar_imagen"
             app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.096"
@@ -108,7 +108,7 @@
             android:background="@drawable/custom_input"
             android:ems="10"
             android:inputType="textPersonName"
-            android:hint="Nombre Cancha"
+            android:hint="@string/nombre_cancha"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
@@ -119,7 +119,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text="Ingrese Nombre de la cancha "
+            android:text="@string/ingrese_nombre_de_la_cancha"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.133"
             app:layout_constraintStart_toStartOf="parent"
@@ -133,7 +133,7 @@
             android:background="@drawable/custom_input"
             android:ems="10"
             android:inputType="textPersonName"
-            android:hint="Selecione Ubicacion"
+            android:hint="@string/selecione_ubicacion"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView30" />
@@ -143,7 +143,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text="Ingrese Ubicación"
+            android:text="@string/ingrese_ubicaci_n"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.1"
             app:layout_constraintStart_toStartOf="parent"
@@ -156,8 +156,8 @@
             android:layout_marginTop="16dp"
             android:background="@drawable/custom_input"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:hint="Teléfono"
+            android:hint="@string/tel_fono"
+            android:inputType="phone"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.474"
             app:layout_constraintStart_toStartOf="parent"
@@ -168,65 +168,48 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text="Ingrese Teléfono"
+            android:text="@string/ingrese_tel_fono"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.098"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/telefonoEditText" />
 
-        <EditText
+        <TextView
             android:id="@+id/horarioEntradaEditText"
-            android:layout_width="141dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="12dp"
-            android:background="@drawable/custom_input"
-            android:ems="10"
+            android:layout_width="134dp"
+            android:layout_height="34dp"
+            android:layout_marginTop="27dp"
+            android:ems="20"
+            android:hint="@string/apertura"
+            android:textSize="14dp"
+            android:textColor="@color/black"
             android:inputType="textPersonName"
-            android:hint="Apertura"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.111"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.108"
+            app:layout_constraintStart_toEndOf="@+id/button_btn"
             app:layout_constraintTop_toBottomOf="@+id/textView35" />
 
-        <EditText
+        <TextView
             android:id="@+id/horarioCierre_daEditText"
-            android:layout_width="141dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="12dp"
-            android:background="@drawable/custom_input"
+            android:layout_width="134dp"
+            android:layout_height="34dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="132dp"
+            android:textSize="14dp"
+            android:textColor="@color/black"
             android:ems="10"
+            android:hint="@string/cierre"
             android:inputType="textPersonName"
-            android:hint="Cierre"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.712"
-            app:layout_constraintStart_toEndOf="@+id/horarioEntradaEditText"
-            app:layout_constraintTop_toBottomOf="@+id/textView35" />
-
-        <TextView
-            android:id="@+id/textView33"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="28dp"
-            android:text="Ingrese horario apertura"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/button_Cierre"
             app:layout_constraintTop_toBottomOf="@+id/horarioEntradaEditText" />
-
-        <TextView
-            android:id="@+id/textView34"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Ingrese horario cierre"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.656"
-            app:layout_constraintStart_toEndOf="@+id/textView33"
-            app:layout_constraintTop_toBottomOf="@+id/horarioCierre_daEditText" />
 
         <TextView
             android:id="@+id/textView35"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Horarios de apertura y cierre "
+            android:text="@string/horarios_de_apertura_y_cierre"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.131"
             app:layout_constraintStart_toStartOf="parent"
@@ -236,11 +219,11 @@
             android:id="@+id/textView37"
             android:layout_width="352dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:text="Escriba que tipo de canchas tiene para 10 personas o más  y al día cuantos turnos tiene en total. "
+            android:layout_marginTop="20dp"
+            android:text="@string/escriba_que_tipo_de_canchas_tiene_para_10_personas_o_m_s_y_al_d_a_cuantos_turnos_tiene_en_total"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView33" />
+            app:layout_constraintTop_toBottomOf="@+id/horarioCierre_daEditText" />
 
         <EditText
             android:id="@+id/editTextTextPersonName7"
@@ -250,7 +233,7 @@
             android:background="@drawable/custom_input"
             android:ems="10"
             android:inputType="textPersonName"
-            android:hint="Escribir.."
+            android:hint="@string/escribir"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView37" />
@@ -261,7 +244,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:layout_marginBottom="32dp"
-            android:text="Ingrese Descripción"
+            android:text="@string/ingrese_descripci_n"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.104"
@@ -276,8 +259,8 @@
             android:layout_marginTop="20dp"
             android:background="@drawable/custom_input"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:hint="Coste por cancha"
+            android:inputType="numberDecimal"
+            android:hint="@string/coste_por_cancha"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName7" />
@@ -287,7 +270,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:text="Ingrese Coste"
+            android:text="@string/ingrese_coste"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.092"
             app:layout_constraintStart_toStartOf="parent"
@@ -301,7 +284,7 @@
             android:background="@drawable/custom_input"
             android:ems="10"
             android:inputType="textPersonName"
-            android:hint="Descripción"
+            android:hint="@string/descripci_n"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView17" />
@@ -313,12 +296,34 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:onClick="onClick"
-            android:text="Siguiente"
+            android:text="@string/siguiente"
             android:textColor="@color/followers"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.792"
-            app:layout_constraintStart_toEndOf="@+id/textView26"
+            app:layout_constraintStart_toEndOf="@+id/textViewBeta"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button_btn"
+            android:layout_width="78dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="28dp"
+            android:onClick="onClick"
+            android:text="Hora"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView35" />
+
+        <Button
+            android:id="@+id/button_Cierre"
+            android:layout_width="78dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="20dp"
+            android:onClick="onClick"
+            android:text="Hora"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_btn" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

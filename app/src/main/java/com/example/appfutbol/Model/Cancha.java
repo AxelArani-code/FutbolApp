@@ -6,8 +6,8 @@ public class Cancha implements Serializable {
     private String Id;
     private String nombre;
     private String ubicacion;
-    private String precio;
-    private String numero;
+    private int precio;
+    private int numero;
     private String horarios_Apertura;
     private String horarios_Cierre;
     private String descripcion;
@@ -15,7 +15,7 @@ public class Cancha implements Serializable {
 
     }
 
-    public Cancha(String id, String nombre, String ubicacion, String precio, String numero, String horarios_Apertura, String horarios_Cierre, String descripcion) {
+    public Cancha(String id, String nombre, String ubicacion, int precio, int numero, String horarios_Apertura, String horarios_Cierre, String descripcion) {
         Id = id;
         this.nombre = nombre;
         this.ubicacion = ubicacion;
@@ -50,19 +50,19 @@ public class Cancha implements Serializable {
         this.ubicacion = ubicacion;
     }
 
-    public String getPrecio() {
+    public int getPrecio() {
         return precio;
     }
 
-    public void setPrecio(String precio) {
+    public void setPrecio(int precio) {
         this.precio = precio;
     }
 
-    public String getNumero() {
+    public int getNumero() {
         return numero;
     }
 
-    public void setNumero(String numero) {
+    public void setNumero(int numero) {
         this.numero = numero;
     }
 

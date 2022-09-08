@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:gravity="center">
 
     <LinearLayout
@@ -18,10 +19,12 @@
             android:layout_gravity="center"
             android:gravity="center_vertical">
 
-            <ProgressBar
+            <com.airbnb.lottie.LottieAnimationView
                 android:layout_width="match_parent"
-                android:layout_height="101dp"
-                android:layout_gravity="center" />
+                android:layout_height="match_parent"
+                app:lottie_rawRes="@raw/check_tablero"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"/>
 
         </LinearLayout>
     </LinearLayout>

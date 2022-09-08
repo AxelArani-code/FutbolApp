@@ -6,15 +6,19 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.ProgressDialog;
+import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.TimePicker;
 import android.widget.Toast;
 
 import com.example.appfutbol.Adapter.canchaAdapter;
@@ -32,14 +36,16 @@ import com.google.firebase.storage.StorageTask;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 
 public class CreationMatch extends AppCompatActivity {
     ImageView btn_Back, viewImage;
     ListView mostarDatos, btn_Guardar;
-    EditText nameEditText, ubicacionEditText,descripcionEditText, horarioEntradaEditText, telefonoEditText,precioEditText,horarioCierre_daEditText;
-    Button  btn_GuardarImage;
+    TextView horarioEntradaEditText,horarioCierre_daEditText;
+    EditText nameEditText, ubicacionEditText,descripcionEditText,  telefonoEditText,precioEditText;
+    Button  btn_GuardarImage,btn_Hora_Apertura,btn_Hora_Cierre;
     FirebaseAuth mAuth;
     DatabaseReference databaseReference;
     FirebaseDatabase firebaseDatabase;
@@ -56,11 +62,15 @@ public class CreationMatch extends AppCompatActivity {
     private String myUri;
     private StorageTask uploadTask;
     private StorageReference storageReference;
+
+    private int dia, mes, ano, hora, minutos;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_creation_match);
         initializeUI();
+
+
     }
 
 
@@ -71,9 +81,44 @@ public class CreationMatch extends AppCompatActivity {
                 matchSave();
                 break;
 
+            case R.id.button_btn:
+                horario_Apertura();
+
+                break;
+
+            case R.id.button_Cierre:
+                horario_Cierre();
+                break;
+
 
 
         }
+    }
+
+    private void horario_Apertura() {
+        final Calendar c= Calendar.getInstance();
+        hora = c.get(Calendar.HOUR_OF_DAY);
+        minutos = c.get(Calendar.MINUTE);
+        TimePickerDialog timePickerDialog = new TimePickerDialog(this, new TimePickerDialog.OnTimeSetListener() {
+            @Override
+            public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+                horarioEntradaEditText.setText(hourOfDay+":"+minute);
+            }
+        },hora, minutos,false);
+        timePickerDialog.show();
+    }
+
+    private void horario_Cierre() {
+        final Calendar c= Calendar.getInstance();
+        hora = c.get(Calendar.HOUR_OF_DAY);
+        minutos = c.get(Calendar.MINUTE);
+        TimePickerDialog timePickerDialog = new TimePickerDialog(this, new TimePickerDialog.OnTimeSetListener() {
+            @Override
+            public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+                horarioCierre_daEditText.setText(hourOfDay+":"+minute);
+            }
+        },hora, minutos,false);
+        timePickerDialog.show();
     }
 
     private void updateImage() {
@@ -134,7 +179,13 @@ public class CreationMatch extends AppCompatActivity {
 
 
     private void matchSave() {
-        String nombre, ubicacion, descripcion, horarios_Apertura,horarios_Cierre,telefono, precio;
+        String nombre;
+        String ubicacion;
+        String descripcion;
+        String horarios_Apertura;
+        String horarios_Cierre;
+        String telefono;
+        String precio;
         nombre =nameEditText.getText().toString().trim();
         ubicacion = ubicacionEditText.getText().toString().trim();
         descripcion = descripcionEditText.getText().toString().trim();
@@ -149,16 +200,17 @@ public class CreationMatch extends AppCompatActivity {
             return;
         }
 
-        if (horarios_Apertura.isEmpty()){
-            horarioEntradaEditText.setError("Ingrese el horario");
-            horarioEntradaEditText.requestFocus();
-            return;
+       /* if (btnlol.setOnClickListener();){
+
+            //horarioEntradaEditText.setError("Ingrese el horario");
+           // horarioEntradaEditText.requestFocus();
+           // return;
         }
         if (horarios_Cierre.isEmpty()){
             horarioCierre_daEditText.setError("Ingrese el horario");
             horarioCierre_daEditText.requestFocus();
             return;
-        }
+        }*/
         if (telefono.isEmpty()){
             telefonoEditText.setError("Ingrese el numero de telefono");
             telefonoEditText.requestFocus();
@@ -181,7 +233,7 @@ public class CreationMatch extends AppCompatActivity {
             return;
         }
 
-        if (nombre.equals("")|| ubicacion.equals("")||descripcion.equals("")||horarios_Apertura.equals("")||horarios_Cierre.equals("")||telefono.equals("")||precio.equals("")){
+        if (nombre.equals("")|| ubicacion.equals("")||descripcion.equals("")||telefono.equals("")||precio.equals("")){
             matchSave();
         }else{
             Cancha cancha = new Cancha();
@@ -190,18 +242,33 @@ public class CreationMatch extends AppCompatActivity {
             cancha.setUbicacion(ubicacion);
             cancha.setHorarios_Apertura(horarios_Apertura);
             cancha.setHorarios_Cierre(horarios_Cierre);
-            cancha.setNumero(telefono);
-            cancha.setPrecio(precio);
+            cancha.setNumero(Integer.parseInt(telefono));
+            cancha.setPrecio(Integer.parseInt(precio));
             //databaseReference.child("canchas").child(cancha.getId()).setValue(cancha);
             FirebaseDatabase.getInstance().getReference("cancha")
                     .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                     .setValue(cancha);
-            Toast.makeText(this,"Agregado correctamente",Toast.LENGTH_LONG).show();
             ProgressBarStart();
+           // Toast.makeText(this,"Agregado correctamente",Toast.LENGTH_LONG).show();
+            Log.i("Enviado_datos_De_Cancha", "Los datos se enviaros a Database");
+            //ProgressBarStart();
+
+         //   Intent intent = new Intent(getApplicationContext(),LoadTurno.class);
+            // intent.putExtra("nombre", cancha.getNombre());
+            //  intent.putExtra("descripsion", cancha.getDescripcion());
+            //  intent.putExtra("ubicacion", cancha.getUbicacion());
+            //   intent.putExtra("horarios_Apertura", cancha.getHorarios_Apertura());
+            //  intent.putExtra("horarios_Cierre", cancha.getHorarios_Cierre());
+            //    intent.putExtra("telefono", cancha.getNumero());
+            // intent.putExtra("presio", cancha.getPrecio());
+
+            //  intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            //   getApplicationContext().startActivity(intent);
+
 
             clearBox();
         }
-        Toast.makeText(this,"Error, intente más tarde",Toast.LENGTH_LONG).show();
+       // Toast.makeText(this,"Error, intente más tarde",Toast.LENGTH_LONG).show();
 
 
 
@@ -246,14 +313,16 @@ public class CreationMatch extends AppCompatActivity {
     }
     private void initializeUI() {
         btn_Back = findViewById(R.id.btn_Back);
-       //btn_Guardar = findViewById(R.id.btn_GuardarMat);
-       // btn_GuardarImage = findViewById(R.id.btn_GuardaImage);
+        //btn_Guardar = findViewById(R.id.btn_GuardarMat);
+        // btn_GuardarImage = findViewById(R.id.btn_GuardaImage);
 
-       //viewImage = findViewById(R.id.imageViewUrl);
-
+        //viewImage = findViewById(R.id.imageViewUrl);
+        btn_Hora_Apertura = findViewById(R.id.button_btn);
+        btn_Hora_Cierre= findViewById(R.id.button_Cierre);
         nameEditText = findViewById(R.id.nameEditText);
         ubicacionEditText = findViewById(R.id.animeEditText);
         descripcionEditText = findViewById(R.id.descriptionEditText);
+        horarioEntradaEditText = findViewById(R.id.horarioEntradaEditText);
         horarioEntradaEditText = findViewById(R.id.horarioEntradaEditText);
         horarioCierre_daEditText = findViewById(R.id.horarioCierre_daEditText);
         precioEditText = findViewById(R.id.precioEditText);

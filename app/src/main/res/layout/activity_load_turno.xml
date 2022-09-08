@@ -20,13 +20,13 @@
             android:layout_marginTop="16dp"
             android:text="Cancelar"
             android:textColor="@color/followers"
-            app:layout_constraintEnd_toStartOf="@+id/textView26"
+            app:layout_constraintEnd_toStartOf="@+id/textViewBeta"
             app:layout_constraintHorizontal_bias="0.202"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView26"
+            android:id="@+id/textViewBeta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -40,29 +40,31 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/imageView8"
+            android:id="@+id/btn_Turno_Nuevo_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginTop="100dp"
+            android:onClick="onClick"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView26"
+            app:layout_constraintTop_toBottomOf="@+id/textViewBeta"
             app:srcCompat="@drawable/car_view_1" />
 
         <ImageView
-            android:id="@+id/imageView11"
+            android:id="@+id/btn_Turno_Nuevo_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="100dp"
             android:layout_marginEnd="32dp"
+            android:onClick="onClick"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.894"
-            app:layout_constraintStart_toEndOf="@+id/imageView8"
-            app:layout_constraintTop_toBottomOf="@+id/textView26"
-            app:srcCompat="@drawable/car_view_1" />
+            app:layout_constraintStart_toEndOf="@+id/btn_Turno_Nuevo_1"
+            app:layout_constraintTop_toBottomOf="@+id/textViewBeta"
+            app:srcCompat="@drawable/car_view_2" />
 
         <TextView
-            android:id="@+id/textView11"
+            android:id="@+id/textView_TURNO"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -70,7 +72,7 @@
             app:layout_constraintEnd_toStartOf="@+id/textView13"
             app:layout_constraintHorizontal_bias="0.336"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+            app:layout_constraintTop_toBottomOf="@+id/btn_Turno_Nuevo_1" />
 
         <TextView
             android:id="@+id/textView13"
@@ -80,26 +82,28 @@
             android:layout_marginEnd="84dp"
             android:text="N_Turno"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView11" />
+            app:layout_constraintTop_toBottomOf="@+id/btn_Turno_Nuevo_2" />
 
         <ImageView
-            android:id="@+id/imageView12"
+            android:id="@+id/btn_Turno_Nuevo_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginTop="60dp"
+            android:onClick="onClick"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView11"
+            app:layout_constraintTop_toBottomOf="@+id/textView_TURNO"
             app:srcCompat="@drawable/car_view_2" />
 
         <ImageView
-            android:id="@+id/imageView13"
+            android:id="@+id/btn_Turno_Nuevo_4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="60dp"
+            android:onClick="onClick"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.573"
-            app:layout_constraintStart_toEndOf="@+id/imageView12"
+            app:layout_constraintStart_toEndOf="@+id/btn_Turno_Nuevo_3"
             app:layout_constraintTop_toBottomOf="@+id/textView13"
             app:srcCompat="@drawable/car_view_2" />
 
@@ -112,7 +116,7 @@
             app:layout_constraintEnd_toStartOf="@+id/textView19"
             app:layout_constraintHorizontal_bias="0.324"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView12" />
+            app:layout_constraintTop_toBottomOf="@+id/btn_Turno_Nuevo_3" />
 
         <TextView
             android:id="@+id/textView19"
@@ -122,7 +126,7 @@
             android:layout_marginEnd="76dp"
             android:text="N_Turno"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView13" />
+            app:layout_constraintTop_toBottomOf="@+id/btn_Turno_Nuevo_4" />
 
         <TextView
             android:id="@+id/textView20"
@@ -130,10 +134,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             android:text="Carga tus turnos asi podremos ayudarte"
-            app:layout_constraintBottom_toTopOf="@+id/imageView8"
+            app:layout_constraintBottom_toTopOf="@+id/btn_Turno_Nuevo_1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView26"
+            app:layout_constraintTop_toBottomOf="@+id/textViewBeta"
             app:layout_constraintVertical_bias="0.0" />
 
         <TextView
@@ -143,7 +147,7 @@
             android:layout_marginStart="80dp"
             android:layout_marginBottom="5dp"
             android:text="Lunes"
-            app:layout_constraintBottom_toTopOf="@+id/imageView8"
+            app:layout_constraintBottom_toTopOf="@+id/btn_Turno_Nuevo_1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView20"
             app:layout_constraintVertical_bias="1.0" />
@@ -155,7 +159,7 @@
             android:layout_marginEnd="84dp"
             android:layout_marginBottom="5dp"
             android:text="Sabado"
-            app:layout_constraintBottom_toTopOf="@+id/imageView23"
+            app:layout_constraintBottom_toTopOf="@+id/btn_Turno_Nuevo_6"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView19"
             app:layout_constraintVertical_bias="1.0" />
@@ -167,7 +171,7 @@
             android:layout_marginEnd="88dp"
             android:layout_marginBottom="5dp"
             android:text="Martes"
-            app:layout_constraintBottom_toTopOf="@+id/imageView11"
+            app:layout_constraintBottom_toTopOf="@+id/btn_Turno_Nuevo_2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView20"
             app:layout_constraintVertical_bias="1.0" />
@@ -179,7 +183,7 @@
             android:layout_marginStart="80dp"
             android:layout_marginBottom="5dp"
             android:text="Viernes"
-            app:layout_constraintBottom_toTopOf="@+id/imageView22"
+            app:layout_constraintBottom_toTopOf="@+id/btn_Turno_Nuevo_5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView18"
             app:layout_constraintVertical_bias="0.952" />
@@ -191,9 +195,9 @@
             android:layout_marginStart="72dp"
             android:layout_marginBottom="5dp"
             android:text="Miercoles"
-            app:layout_constraintBottom_toTopOf="@+id/imageView12"
+            app:layout_constraintBottom_toTopOf="@+id/btn_Turno_Nuevo_3"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView11"
+            app:layout_constraintTop_toBottomOf="@+id/textView_TURNO"
             app:layout_constraintVertical_bias="1.0" />
 
         <TextView
@@ -204,24 +208,26 @@
             android:layout_marginEnd="84dp"
             android:text="N_Turno"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView23" />
+            app:layout_constraintTop_toBottomOf="@+id/btn_Turno_Nuevo_6" />
 
         <ImageView
-            android:id="@+id/imageView22"
+            android:id="@+id/btn_Turno_Nuevo_5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginTop="60dp"
+            android:onClick="onClick"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView18"
             app:srcCompat="@drawable/car_view_2" />
 
         <ImageView
-            android:id="@+id/imageView23"
+            android:id="@+id/btn_Turno_Nuevo_6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="60dp"
             android:layout_marginEnd="32dp"
+            android:onClick="onClick"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView19"
             app:srcCompat="@drawable/car_view_2" />
@@ -235,7 +241,7 @@
             app:layout_constraintEnd_toStartOf="@+id/textView51"
             app:layout_constraintHorizontal_bias="0.36"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView22" />
+            app:layout_constraintTop_toBottomOf="@+id/btn_Turno_Nuevo_5" />
 
         <TextView
             android:id="@+id/textView47"
@@ -244,7 +250,8 @@
             android:layout_marginTop="500dp"
             android:text="TextView"
             app:layout_constraintTop_toBottomOf="@+id/textView18"
-            tools:layout_editor_absoluteX="136dp" />
+            tools:layout_editor_absoluteX="136dp"
+            tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/textView46"
@@ -253,7 +260,7 @@
             android:layout_marginEnd="88dp"
             android:layout_marginBottom="5dp"
             android:text="Jueves"
-            app:layout_constraintBottom_toTopOf="@+id/imageView13"
+            app:layout_constraintBottom_toTopOf="@+id/btn_Turno_Nuevo_4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView13"
             app:layout_constraintVertical_bias="1.0" />
@@ -266,6 +273,7 @@
             android:visibility="gone">
 
             <LinearLayout
+                android:id="@+id/view_carview2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
@@ -278,7 +286,10 @@
                         android:id="@+id/imageView16"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/car_view_border" />
+                        app:srcCompat="@drawable/car_view_border"
+                        tools:ignore="MissingConstraints"
+                        tools:layout_editor_absoluteX="0dp"
+                        tools:layout_editor_absoluteY="0dp" />
 
                     <TextView
                         android:id="@+id/textView36"
@@ -295,10 +306,11 @@
                         app:layout_constraintTop_toTopOf="@+id/imageView16" />
 
                     <TextView
-                        android:id="@+id/textView38"
+                        android:id="@+id/textViewCancelar_Turno"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
+                        android:onClick="onClick"
                         android:text="Cancelar"
                         android:textColor="#0093FF"
                         android:textStyle="bold"
@@ -323,7 +335,7 @@
                         app:layout_constraintTop_toBottomOf="@+id/textView36" />
 
                     <EditText
-                        android:id="@+id/editTextTextPersonName3"
+                        android:id="@+id/editTextTextNombre_Turno"
                         android:layout_width="345dp"
                         android:layout_height="50dp"
                         android:layout_marginTop="20dp"
@@ -345,7 +357,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.133"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
+                        app:layout_constraintTop_toBottomOf="@+id/editTextTextNombre_Turno" />
 
                     <TextView
                         android:id="@+id/textView41"
@@ -359,121 +371,101 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/textView40" />
 
-                    <EditText
-                        android:id="@+id/editTextTextPersonName5"
-                        android:layout_width="147dp"
-                        android:layout_height="44dp"
-                        android:layout_marginStart="32dp"
-                        android:layout_marginTop="12dp"
-                        android:background="@drawable/custom_input"
-                        android:ems="10"
-                        android:inputType="textPersonName"
-                        android:text="Name"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/textView41" />
-
-                    <EditText
-                        android:id="@+id/editTextTextPersonName6"
-                        android:layout_width="147dp"
-                        android:layout_height="44dp"
-                        android:layout_marginTop="12dp"
-                        android:background="@drawable/custom_input"
-                        android:ems="10"
-                        android:inputType="textPersonName"
-                        android:text="Name"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName5"
-                        app:layout_constraintTop_toBottomOf="@+id/textView41" />
-
                     <TextView
                         android:id="@+id/textView42"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
                         android:text="Seleccione el dia del turno"
                         android:textColor="@color/white"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.129"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName5" />
+                        app:layout_constraintTop_toBottomOf="@+id/button_Hora_Cierre"
+                        tools:ignore="MissingConstraints" />
 
                     <CheckBox
-                        android:id="@+id/checkBox"
+                        android:id="@+id/checkBox_Lunes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="32dp"
                         android:layout_marginTop="12dp"
                         android:text="Lunes"
                         android:textColor="@color/white"
+                        android:visibility="gone"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/textView42" />
 
                     <CheckBox
-                        android:id="@+id/checkBox2"
+                        android:id="@+id/checkBox_Martes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="40dp"
                         android:layout_marginTop="12dp"
                         android:text="Martes"
                         android:textColor="@color/white"
-                        app:layout_constraintStart_toEndOf="@+id/checkBox"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toEndOf="@+id/checkBox_Lunes"
                         app:layout_constraintTop_toBottomOf="@+id/textView42" />
 
                     <CheckBox
-                        android:id="@+id/checkBox3"
+                        android:id="@+id/checkBox_Miercoles"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="32dp"
                         android:layout_marginTop="12dp"
                         android:text="Miercoles"
                         android:textColor="@color/white"
-                        app:layout_constraintStart_toEndOf="@+id/checkBox2"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toEndOf="@+id/checkBox_Martes"
                         app:layout_constraintTop_toBottomOf="@+id/textView42" />
 
                     <CheckBox
-                        android:id="@+id/checkBox4"
+                        android:id="@+id/checkBox_Jueves"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="32dp"
                         android:layout_marginTop="12dp"
                         android:text="Jueves"
                         android:textColor="@color/white"
+                        android:visibility="gone"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+                        app:layout_constraintTop_toBottomOf="@+id/checkBox_Lunes" />
 
                     <CheckBox
-                        android:id="@+id/checkBox5"
+                        android:id="@+id/checkBox_viernes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="32dp"
                         android:layout_marginTop="12dp"
                         android:text="Viernes"
                         android:textColor="@color/white"
-                        app:layout_constraintStart_toEndOf="@+id/checkBox4"
-                        app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
+                        android:visibility="gone"
+                        app:layout_constraintStart_toEndOf="@+id/checkBox_Jueves"
+                        app:layout_constraintTop_toBottomOf="@+id/checkBox_Martes" />
 
                     <CheckBox
-                        android:id="@+id/checkBox6"
+                        android:id="@+id/checkBox_Sabado"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="32dp"
                         android:layout_marginTop="12dp"
                         android:text="Sabado"
                         android:textColor="@color/white"
-                        app:layout_constraintStart_toEndOf="@+id/checkBox5"
-                        app:layout_constraintTop_toBottomOf="@+id/checkBox3" />
+                        android:visibility="gone"
+                        app:layout_constraintStart_toEndOf="@+id/checkBox_viernes"
+                        app:layout_constraintTop_toBottomOf="@+id/checkBox_Miercoles" />
 
                     <EditText
-                        android:id="@+id/editTextTextPersonName8"
+                        android:id="@+id/editTextText_Cantidad_Persona"
                         android:layout_width="345dp"
                         android:layout_height="50dp"
                         android:background="@drawable/custom_input"
                         android:ems="10"
-                        android:inputType="textPersonName"
-                        android:text="Name"
+                        android:hint="Cantidad de Personas"
+                        android:inputType="numberDecimal"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
+                        app:layout_constraintTop_toBottomOf="@+id/checkBox_Jueves" />
 
                     <TextView
                         android:id="@+id/textView52"
@@ -484,16 +476,16 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.108"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName8" />
+                        app:layout_constraintTop_toBottomOf="@+id/editTextText_Cantidad_Persona" />
 
                     <EditText
-                        android:id="@+id/editTextTextPersonName9"
+                        android:id="@+id/editTextText_Coste_Cancha"
                         android:layout_width="345dp"
                         android:layout_height="50dp"
                         android:background="@drawable/custom_input"
                         android:ems="10"
+                        android:hint="Coste Total"
                         android:inputType="textPersonName"
-                        android:text="Name"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/textView52" />
@@ -502,17 +494,19 @@
                         android:id="@+id/textView53"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
                         android:text="Ingrese Coste Total "
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.111"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName9" />
+                        app:layout_constraintTop_toBottomOf="@+id/editTextText_Coste_Cancha" />
 
                     <TextView
-                        android:id="@+id/textView54"
+                        android:id="@+id/btn_Listo_1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="124dp"
+                        android:onClick="onClick"
                         android:text="Listo"
                         android:textColor="#0093FF"
                         android:textSize="17dp"
@@ -522,9 +516,162 @@
                         app:layout_constraintStart_toEndOf="@+id/textView36"
                         app:layout_constraintTop_toTopOf="@+id/imageView16" />
 
+                    <TextView
+                        android:id="@+id/btn_Listo_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="124dp"
+                        android:onClick="onClick"
+                        android:text="Listo"
+                        android:textColor="#0093FF"
+                        android:textSize="17dp"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.656"
+                        app:layout_constraintStart_toEndOf="@+id/textView36"
+                        app:layout_constraintTop_toTopOf="@+id/imageView16" />
+
+                    <TextView
+                        android:id="@+id/btn_Listo_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="124dp"
+                        android:onClick="onClick"
+                        android:text="Listo"
+                        android:textColor="#0093FF"
+                        android:textSize="17dp"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.656"
+                        app:layout_constraintStart_toEndOf="@+id/textView36"
+                        app:layout_constraintTop_toTopOf="@+id/imageView16" />
+
+                    <TextView
+                        android:id="@+id/btn_Listo_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="124dp"
+                        android:onClick="onClick"
+                        android:text="Listo"
+                        android:textColor="#0093FF"
+                        android:textSize="17dp"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.656"
+                        app:layout_constraintStart_toEndOf="@+id/textView36"
+                        app:layout_constraintTop_toTopOf="@+id/imageView16" />
+
+                    <TextView
+                        android:id="@+id/btn_Listo_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="124dp"
+                        android:onClick="onClick"
+                        android:text="Listo"
+                        android:textColor="#0093FF"
+                        android:textSize="17dp"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.656"
+                        app:layout_constraintStart_toEndOf="@+id/textView36"
+                        app:layout_constraintTop_toTopOf="@+id/imageView16" />
+
+                    <TextView
+                        android:id="@+id/btn_Listo_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="124dp"
+                        android:onClick="onClick"
+                        android:text="Listo"
+                        android:textColor="#0093FF"
+                        android:textSize="17dp"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.656"
+                        app:layout_constraintStart_toEndOf="@+id/textView36"
+                        app:layout_constraintTop_toTopOf="@+id/imageView16" />
+
+                    <Button
+                        android:id="@+id/button_Hora_Apertura"
+                        android:layout_width="91dp"
+                        android:layout_height="39dp"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="16dp"
+                        android:onClick="onClick"
+                        android:text="Inicio"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView41" />
+
+                    <Button
+                        android:id="@+id/button_Hora_Cierre"
+                        android:layout_width="90dp"
+                        android:layout_height="42dp"
+                        android:layout_marginStart="32dp"
+                        android:onClick="onClick"
+                        android:text="final"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/button_Hora_Apertura" />
+
+                    <TextView
+                        android:id="@+id/textView_Hora_Apertura"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="28dp"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.105"
+                        app:layout_constraintStart_toEndOf="@+id/button_Hora_Apertura"
+                        app:layout_constraintTop_toBottomOf="@+id/textView41" />
+
+                    <TextView
+                        android:id="@+id/textView_Hora_Cierre"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.105"
+                        app:layout_constraintStart_toEndOf="@+id/button_Hora_Cierre"
+                        app:layout_constraintTop_toBottomOf="@+id/textView_Hora_Apertura" />
+
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </LinearLayout>
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView_TURNO2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView25" />
+
+        <TextView
+            android:id="@+id/btn_Siguiente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:onClick="onClick"
+            android:text="Siguiente"
+            android:textColor="@color/followers"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.714"
+            app:layout_constraintStart_toEndOf="@+id/textViewBeta"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
